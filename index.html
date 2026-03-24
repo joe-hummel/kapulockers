@@ -20,7 +20,7 @@
         min-height: 420px;
         display: flex;
         align-items: flex-start; /* move content toward top */
-        padding: 40px 20px 80px; /* reduced top padding */
+        padding: 40px 20px 80px;
         color: white;
     }
 
@@ -67,7 +67,9 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        width: 60%; /* narrower buttons */
         max-width: 260px;
+        align-items: flex-start; /* left align */
     }
 
     .btn {
@@ -79,20 +81,13 @@
         font-size: 1rem;
         font-weight: 600;
         text-align: center;
+        width: 100%; /* ensures consistent width */
+        box-sizing: border-box;
     }
 
     .btn.secondary {
         background: #4da3ff; /* lighter blue */
         border: 1px solid rgba(255,255,255,0.4);
-    }
-
-    /* MOBILE BUTTON WIDTH */
-    @media (max-width: 600px) {
-        .hero-buttons {
-            max-width: 66%;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     /* TROPICAL BACKGROUND WRAPPER */
