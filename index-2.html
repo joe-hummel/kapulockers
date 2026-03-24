@@ -19,8 +19,8 @@
         background: url('./images/background.png') center/cover no-repeat;
         min-height: 420px;
         display: flex;
-        align-items: flex-start; /* move content toward top */
-        padding: 40px 20px 80px; /* reduced top padding */
+        align-items: center;
+        padding: 80px 20px;
         color: white;
     }
 
@@ -65,7 +65,7 @@
     .hero-buttons {
         margin-top: 25px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* stack vertically */
         gap: 12px;
         max-width: 260px;
     }
@@ -84,15 +84,6 @@
     .btn.secondary {
         background: #4da3ff; /* lighter blue */
         border: 1px solid rgba(255,255,255,0.4);
-    }
-
-    /* MOBILE BUTTON WIDTH */
-    @media (max-width: 600px) {
-        .hero-buttons {
-            max-width: 66%;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     /* TROPICAL BACKGROUND WRAPPER */
@@ -223,8 +214,8 @@
         <p>Store your belongings safely while you swim, surf, or explore Waikiki.</p>
 
         <div class="hero-buttons">
-            <a href="./images/how-to.pdf" class="btn">Rent a Locker</a>
-            <a href="https://maps.google.com/?q=YOUR+LOCATION" class="btn secondary">View Location</a>
+            <a href="./images/how-to.pdf" class="btn secondary">Rent a Locker</a>
+            <a href="https://maps.google.com/?q=YOUR+LOCATION" class="btn">View Locations</a>
         </div>
     </div>
 </div>
@@ -284,9 +275,9 @@
         <div class="pricing-grid">
             <div class="price-card">
                 <h3>Small Locker</h3>
-                <p>$6 – 2 hours</p>
+                <p>$4 – 2 hours</p>
                 <p>$8 – 4 hours</p>
-                <p>$12 – 24 hours</p>
+                <p>$16 – 8 hours</p>
             </div>
         </div>
     </section>
