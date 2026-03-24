@@ -19,7 +19,7 @@
         background: url('./images/background.png') center/cover no-repeat;
         min-height: 420px;
         display: flex;
-        align-items: flex-start;
+        align-items: flex-start; /* move content toward top */
         padding: 40px 20px 80px;
         color: white;
     }
@@ -61,17 +61,15 @@
         line-height: 1.45;
     }
 
-    /* BUTTONS AT BOTTOM LEFT */
+    /* BUTTONS */
     .hero-buttons {
-        position: absolute;
-        bottom: 30px;
-        left: 20px;
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
         gap: 12px;
-        width: 60%;
+        width: 60%; /* narrower buttons */
         max-width: 260px;
-        z-index: 3;
+        align-items: flex-start; /* left align */
     }
 
     .btn {
@@ -83,12 +81,12 @@
         font-size: 1rem;
         font-weight: 600;
         text-align: center;
-        width: 100%;
+        width: 100%; /* ensures consistent width */
         box-sizing: border-box;
     }
 
     .btn.secondary {
-        background: #4da3ff;
+        background: #4da3ff; /* lighter blue */
         border: 1px solid rgba(255,255,255,0.4);
     }
 
@@ -218,11 +216,11 @@
         <h1>Kapu Lockers</h1>
         <p>Secure Beach Lockers in Waikiki</p>
         <p>Store your belongings safely while you swim, surf, or explore Waikiki.</p>
-    </div>
 
-    <div class="hero-buttons">
-        <a href="./images/how-to.pdf" class="btn">Rent a Locker</a>
-        <a href="https://maps.google.com/?q=YOUR+LOCATION" class="btn secondary">View Locations</a>
+        <div class="hero-buttons">
+            <a href="./images/how-to.pdf" class="btn">Rent a Locker</a>
+            <a href="https://maps.google.com/?q=YOUR+LOCATION" class="btn secondary">View Location</a>
+        </div>
     </div>
 </div>
 
