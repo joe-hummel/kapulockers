@@ -199,6 +199,12 @@
         justify-content: space-between;
         align-items: center;
     }
+    
+    .footer-left {
+        display: flex;
+        align-items: center;   /* This is the key — centers text vertically */
+        gap: 14px;
+    }
 
     footer img {
         height: 28px;
@@ -208,22 +214,30 @@
         height: 40px;
     }
     
-    .footer-left {
-        display: flex;
-        align-items: center;   /* This is the key — centers text vertically */
-        gap: 14px;
-    }
-    
     .footer-tagline {
         font-size: 1.25rem;
         font-weight: 600;
-        font-style: italic;          /* italicized */
+        font-style: italic;
         letter-spacing: 0.04em;
-        color: #4aa3ff;              /* premium light blue */
-        line-height: 1;
+        color: #4aa3ff;
+        line-height: 1.1;
         opacity: 0.95;
         position: relative;
-        top: -1px;                   /* optical centering */
+        top: -1px;
+    }
+    
+    @media (max-width: 600px) {
+        .footer-left {
+            flex-direction: column;   /* stack logo + tagline */
+            align-items: flex-start;  /* left-align for clean look */
+            gap: 6px;                 /* tighter spacing */
+        }
+
+        .footer-tagline {
+            font-size: 0.9rem;        /* smaller for mobile */
+            top: 0;                   /* remove optical offset */
+            letter-spacing: 0.03em;
+        }
     }
 </style>
 </head>
@@ -274,8 +288,6 @@
 </div>
 
 <!-- FOOTER -->
-
-
 <footer class="footer">
     <div class="footer-left">
         <img src="./images/kapu-lockers-llc.png" class="kapu-footer-logo" alt="Kapu Lockers Logo">
@@ -284,6 +296,7 @@
 
     <img src="./images/powered-by-kutu.png" class="kutu-footer-logo" alt="Powered by Kutu">
 </footer>
+
 
 </body>
 </html>
