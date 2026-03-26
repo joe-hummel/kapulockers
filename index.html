@@ -205,7 +205,25 @@
     }
 
     .kapu-footer-logo {
-        height: 120px;
+        height: 40px;
+    }
+    
+    .footer-left {
+        display: flex;
+        align-items: center;   /* This is the key — centers text vertically */
+        gap: 14px;
+    }
+    
+    .footer-tagline {
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: italic;          /* italicized */
+        letter-spacing: 0.04em;
+        color: #4aa3ff;              /* premium light blue */
+        line-height: 1;
+        opacity: 0.95;
+        position: relative;
+        top: -1px;                   /* optical centering */
     }
 </style>
 </head>
@@ -256,9 +274,15 @@
 </div>
 
 <!-- FOOTER -->
-<footer>
-    <img src="./images/kapu-logo.png" class="kapu-footer-logo" alt="Kapu Lockers Logo">
-    <img src="./images/kutu-logo.webp" alt="Powered by Kutu">
+
+
+<footer class="footer">
+    <div class="footer-left">
+        <img src="./images/kapu-lockers-llc.png" class="kapu-footer-logo" alt="Kapu Lockers Logo">
+        <span class="footer-tagline">Exclusive Hawaii Distributors</span>
+    </div>
+
+    <img src="./images/powered-by-kutu.png" class="kutu-footer-logo" alt="Powered by Kutu">
 </footer>
 
 </body>
